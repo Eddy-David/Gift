@@ -1,0 +1,648 @@
+/*Fuentes*/
+@font-face{
+     font-family: "cursiva";
+     src: url("MonsieurLaDoulaise-Regular.ttf");
+}
+@font-face{
+     font-family: "serifb";
+     src: url("Serif Bold.ttf");
+}
+@font-face{
+     font-family: "serifbi";
+     src: url("Serif BoldI.ttf");
+}
+
+/*Seccion general*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+heder{
+  padding: 0;
+ margin: 0;
+}
+.nav-var{
+  height: 10%;
+  align-content: center;
+  background: linear-gradient(#000 30%,transparent);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.nav-var ul{
+  display: flex;
+  list-style: none;
+}
+.nav-var nav ul li a{
+  color: #ff9000;
+  
+}
+.nav-var a{
+  font-size: 3.5vw;
+  padding: 6px;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  font-family: serifbi;
+}
+.hero{
+background: 
+    linear-gradient(transparent 70%,#000),
+    url('isa.jpg') center/cover no-repeat;
+width: 100%;
+height: 100vh;
+justify-items: center;
+align-items: center;
+backdrop-filter: blur(5px);
+}
+.hero p{
+  color: #ff8000;
+  margin-top: 1vh;
+  font-size: 2.8vw;
+  font-family: serifbi;
+}
+.hero-text{
+  width: 80%;
+  height: 80%;
+  padding-top: 20px;
+  margin-top: 20px;
+  
+}
+.hero-text h1{
+  justify-self: center;
+  font-size: 16vw;
+  color: #ff8000;
+  font-family: cursiva;
+  text-shadow: 5px 5px 7px #000;
+}
+
+/*Seccion de fotos*/
+.briefcase{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom, 
+    black 0%, 
+    transparent 40%, 
+    transparent 60%, 
+    black 100%) , url('espacio (4).jpg')center/cover no-repeat;
+}
+.briefcase-content{
+  
+}
+.briefcase-section h2{
+  font-family: cursiva;
+  font-size: 4rem;
+  color: #ff8000;
+  padding: 40px;
+  text-align: center;
+}
+.briefcase-grid{
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(290px,auto));
+  gap: 15px;
+  width: 90%;
+  margin:0 auto;
+}
+.briefcase-grid img{
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  
+}
+.briefcase-grid img:hover{
+  transform: scale(1.1);
+  border: solid;
+  border-color: #ff8000;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px #000;
+}
+
+/*Seccion para calendario*/
+.calendario-container{
+  padding: 0;
+  margin: 0;
+  background-color: #001A00;
+  gap: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(
+    to bottom, 
+    black 0%, 
+    transparent 40%, 
+    transparent 60%, 
+    black 100%)  ,url('espacio (1).jpg')center/cover no-repeat;
+}
+.calendario-section{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  padding: 25px;
+  width: 80%;
+  max-width: 990px;
+  background: rgba(0, 0, 0,0.8);
+  box-shadow: 0 10px 30px rgb(0, 0, 0,0.5);
+}
+.calendario-section h2{
+  font-size: 4rem;
+  text-align: center;
+  justify-content: center;
+  font-family: cursiva;
+  color: #ff8000;
+}
+.calendario-section p{
+  text-align: center;
+  color: #ff8000;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-family: serifbi;
+}
+
+/*Seccion para meses*/
+.meses-selector{
+  display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin-bottom: 30px;
+ flex-wrap: wrap;
+ padding: 15px;
+ border-radius: 5px;
+}
+.btn-mes {
+    background: transparent;
+    color: #ff8000;
+    border: 1px solid #ff8000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    min-width: 110px;
+    text-align: center;
+    font-family: serifbi;
+}
+.btn-mes:hover {
+    background: #ff8000;
+    color: #001A00;
+}
+.meses-selector botton{
+  font-family: Sans-Serif;
+  font-size: 2rem;
+  padding: 1px;
+  border-radius: 10px;
+}
+
+/*Dias de la semana*/
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow:5px 5px 20px 5px #000  
+    padding: 0 5px;
+   /* color:  #FA9000;*/
+}
+.dias-semana div {
+    padding: 15px 0;
+    color: #ff8000;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    font-family: serifb;
+}
+.dias-grid{
+ display: grid;
+ grid-template-columns: repeat(7,1fr);
+ gap: 5px;
+ margin-top: 20px;
+ 
+}
+.dia-calendario{
+  color: #ff8000;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #202020;
+  border-radius: 8px;
+  cursor: pointer;
+  translate: 0.3s;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+  font-family: serifbi;
+}
+.dia-calendario:hover {
+    background: #000;
+    transform: translateY(-2px);
+    border-color:#ff8000 ;
+    box-shadow: 0 5px 15px #111;
+}
+.dia-calendario.con-recuerdo {
+   /* background: linear-gradient(135deg, #000, #004400);*/
+   background: rgb(250,144,0,0.15);
+    border: 1px solid #ff8000;
+    font-weight: 600;
+}
+.dia-calendario.con-recuerdo::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    background: #ff8000;
+    border-radius: 50%;
+}
+.dia-calendario.vacio {
+    background: transparent;
+    cursor: default;
+    border: none;
+    visibility: hidden;
+}
+.dia-calendario.vacio:hover {
+    transform: none;
+    background: transparent;
+}
+
+/*Grid de dias*/
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 30px;
+}
+.botton:hover{
+  background: #000;
+}
+
+/*Seccion para la carta*/
+.carta-container{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #001A00;
+  justify-content: center;
+  color: #ff8000;
+  padding-bottom: 20px;
+  background: linear-gradient(
+    to bottom, 
+    black 0%, 
+    transparent 40%, 
+    transparent 60%, 
+    black 100%) ,url('espacio (4).jpg')center/cover no-repeat;
+}
+.carta-content{
+  flex: 1;
+  margin-top: 20rem;
+  align-items: center;
+  border-top: solid;
+  border-radius: 40px;
+  border-width: 8px;
+  width: 80%;
+  height: 70vh;
+  justify-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+.carta-content h2{
+  font-size: 50px;
+}
+.carta-content:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.carta-title{
+    font-size: 8rem;
+    color: #ff8000;
+    margin-bottom: 8px;
+    font-family: cursiva;
+}
+.carta-text{
+  font-size: 2rem;
+    line-height: 1.7;
+    text-align: left;
+    font-family: serifbi;
+}
+
+/*Fotter*/
+.footer {
+    gap: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh; 
+    background: 
+        linear-gradient(#000 10%, transparent),
+        url('luna1.jpg') center/cover no-repeat;
+}
+.footer-section {
+    box-shadow: 5px 5px 50px 5px #000;
+    padding: 30px 40px; /* Aumentado padding */
+    width: 90%;
+    max-width: 1200px; /* Ancho máximo */
+    height: auto; /* Cambiado a auto */
+    min-height: 80vh; /* Altura mínima */
+    margin: 20px auto; /* Centrado vertical */
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Aumentada opacidad */
+    color: #ff8000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+}
+.footer-section h2 {
+    font-family: cursiva;
+    font-size: 4rem;
+    margin-bottom: 25px;
+    color: #ff8000;
+    letter-spacing: 1px;
+}
+
+/*  VERSOS CON MEJOR FORMATO */
+.verse {
+  font-size: 1.5rem;
+    font-family: serifbi;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(250, 144, 0, 0.3);
+}
+.verse:last-child {
+  
+  font-family: serifbi;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.verse-reference {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #ff8000;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.verse-text {
+    font-size: 0.95em;
+    line-height: 1.7;
+    text-align: left;
+    color: #ffcc80;
+}
+
+/*RESPONSIVE ADJUSTMENTS*/
+@media (max-width: 1024px) {
+    .footer-section {
+        width: 95%;
+        padding: 25px 30px;
+        min-height: 85vh;
+    }
+    
+    .footer-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-section p {
+        font-size: clamp(15px, 1.6vh, 22px);
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .footer-section {
+        width: 95%;
+        padding: 20px;
+        min-height: 90vh;
+        margin: 10px auto;
+        border-radius: 20px;
+    }
+    
+    .footer-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .footer-section p {
+        font-size: clamp(14px, 1.4vh, 20px);
+        line-height: 1.7;
+    }
+    
+    .verse {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .footer-section {
+        width: 98%;
+        padding: 15px;
+        min-height: 95vh;
+        border-radius: 15px;
+    }
+    
+    .footer-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section p {
+        font-size: clamp(13px, 1.2vh, 18px);
+        line-height: 1.6;
+        text-align: left; /* Mejor legibilidad en móviles */
+    }
+    
+    .footer-text-container {
+        padding-right: 10px;
+    }
+    
+    .footer-text-container::-webkit-scrollbar {
+        width: 6px;
+    }
+}
+/* Para pantallas muy altas */
+@media (min-height: 1200px) {
+    .footer-section {
+        max-height: 1000px;
+    }
+    
+    .footer-section p {
+        font-size: clamp(18px, 1.5vh, 28px);
+    }
+}
+
+/*Responsive ajustes*/
+@media(max-width: 1024px){
+  .dias-semana{
+    font-size: 2rem;
+  }
+}
+@media(max-width: 768px){
+  .calendario-section{
+    padding: 20px 15px;
+    margin: 10px;
+  }
+  .calendario-section h2{
+    font-size: 2rem;
+    
+  }
+  .btn-mes{
+    padding: 8px 15px;
+    min-width: 90px;
+    font-size: 0.85rem;
+  }
+  .dias-semana div{
+    padding: 2px 0;
+    font-size: 0.8rem;
+  }
+  .dia-calendario{
+    font-size: 0.9rem;
+  }
+  
+}
+@media(max-width:480px){
+    .meses-selector{
+      gap: 5px;
+    }
+    .btn-mes{
+      padding: 6px 10px;
+      min-width: 70px;
+      font-size: 0.8rem;
+    }
+    .dias-semana div{
+      padding: 10px 0;
+      font-size: 0.75rem;
+    }
+    .calendario-grid{
+      gap:5px;
+    }
+    .dia-calendario{
+      font-size: 0.85rem;
+    }
+    
+  }
+
+/* ===== MODAL MODERNO ===== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: opacity(0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.modal-contenido {
+    background: linear-gradient(145deg, #001A00, #000);
+    width: 100%;
+    max-height: 800px;
+    max-width: 800px;
+    border-radius: 20px;
+    border: 1px solid #FA9000;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff8000;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #ff8000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.btn-cerrar:hover {
+    background: #ff8000;
+    transform: rotate(90deg);
+}
+.modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #Ff8000;
+    background: linear-gradient(transparent,black);
+}
+#modalFecha {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff8000;
+    font-family: serifb;
+}
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #ff8000;
+    color: #ff8000;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.modal-body {
+    padding: 25px 30px;
+}
+.recuerdo-content {
+    margin-bottom: 25px;
+}
+#modalTitulo {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ff8000;
+    font-family: serifbi;
+}
+#modalTexto {
+    color: #ff8000;
+    line-height: 1.7;
+    font-size: 2rem;
+}
+.modal-footer {
+    padding-top: 20px;
+    border-top: 1px solid rgb(255,114,6);
+}
